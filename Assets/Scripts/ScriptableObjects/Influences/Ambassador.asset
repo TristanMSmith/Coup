@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e04d922ffc0954ead341dd080e44db, type: 3}
+  m_Name: Ambassador
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  actions:
+  - {fileID: 11400000, guid: 5fbad5794c458b24fb47c2cd92fb5310, type: 2}
+  - {fileID: 11400000, guid: 3661e05ceaddeca41ad40d3d8d607e11, type: 2}
+  - {fileID: 11400000, guid: bffca6bd6b6a92f4798c36c04d4c3fae, type: 2}
+  - {fileID: 11400000, guid: 48ded9c292b40514cb8d571425905391, type: 2}
+  counteractions:
+  - {fileID: 11400000, guid: e5fc2c9d532a21c4b9853644b522dd34, type: 2}
+  - {fileID: 11400000, guid: 30ba9692c1c9d6a419e9aead74a73b28, type: 2}
