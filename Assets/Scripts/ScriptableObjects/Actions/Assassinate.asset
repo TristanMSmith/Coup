@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6d9f1a78312a40aa7a5927cfd90a3, type: 3}
   m_Name: Assassinate
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 87de387419ff9224c863683b34c83e8a, type: 3}
   description: Pay 3 credits to assassinate another player.
   creditCost: 3
   counteraction: {fileID: 11400000, guid: b038735ae2323eb4e949cda3ac3d9420, type: 2}

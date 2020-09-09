@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-[CreateAssetMenu(fileName = "Action", menuName = "ScriptableObjects/Counteraction", order = 1)]
-public class Counteraction : ScriptableObject
+[CreateAssetMenu(fileName = "Counteraction", menuName = "ScriptableObjects/Counteraction", order = 1)]
+public class Counteraction : Interaction
 {
-    public Sprite sprite;
+    public Action action;
 }
