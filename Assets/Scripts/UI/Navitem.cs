@@ -14,6 +14,6 @@ public class Navitem : MonoBehaviour
 
     public void OnClick()
     {
-        Navbar.instance.Select(this);
+        Navbar.Instance.Select(this);
     }
 }

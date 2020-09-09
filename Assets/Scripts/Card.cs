@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card
 {
     Influence influence;
     // Start is called before the first frame update

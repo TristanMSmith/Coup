@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    List<Card> cards = new List<Card>();
+    Client client;
+    public Card[] cards { get; private set; }
     int credits;
-    public Player()
-    { 
-        //create a new random player
-    }
     // Start is called before the first frame update
     void Start()
     {

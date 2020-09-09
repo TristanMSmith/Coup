@@ -1,39 +1,35 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller
+public class Controller : Singleton<Controller>
 {
-    public static Controller instance = new Controller();
 
     public Dictionary<string, Player> players { get; private set; } = new Dictionary<string, Player>();
-    public Player currentPlayer;
+    public Player currentPlayer { get; private set; }
 
-    void Awake()
+    public void Start()
     {
-        // Forces the screen to be in portrait mode. That's it. Since it's not set to ScreenOrientation.AutoRotation, the device will NOT auto rotate no mater what.
-        Screen.orientation = ScreenOrientation.Portrait;
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
+        StartCoroutine(CycleState());
     }
 
-    public void EndTurn()
+    IEnumerator CycleState()
     {
-        
-    }
-
-
-
-    void StartRound()
-    {
-        
+        while (true)
+        {
+            yield return new WaitForSeconds(3f);
+            switch (Client.Instance.phase)
+            {
+                case Client.Phase.Wait:
+                    Client.Instance.Action();
+                    break;
+                case Client.Phase.Action:
+                    Client.Instance.Counteraction();
+                    break;
+                case Client.Phase.Counteraction:
+                    Client.Instance.Wait();
+                    break;
+            }
+        }
     }
 }

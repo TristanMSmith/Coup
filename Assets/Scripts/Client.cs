@@ -1,12 +1,9 @@
 ﻿using System;
 using UnityEngine;
-
-
-public class Client : MonoBehaviour
+public class Client : Singleton<Client>
 {
     public event EventHandler PhaseChange;
-    public Card[] cards { get; private set; } = new Card[2];
-    public Player player { get; private set; } = new Player();
+    public Player player { get; private set; }
     public enum Phase { Wait, Action, Counteraction }
     public Phase phase
     {
@@ -14,7 +11,7 @@ public class Client : MonoBehaviour
         {
             return _phase;
         }
-        set 
+        private set 
         {
             if (value != _phase)
             {
@@ -26,10 +23,25 @@ public class Client : MonoBehaviour
 
     private Phase _phase = Phase.Wait;
 
-    public static Client instance;
-
     public void OnPhaseChanged(EventArgs e)
     {
         PhaseChange?.Invoke(this, e);
     }
+
+    public void Action()
+    {
+        phase = Phase.Action;
+    }
+
+    public void Counteraction()
+    {
+        phase = Phase.Counteraction;
+    }
+
+    public void Wait()
+    {
+        phase = Phase.Wait;
+    }
+
+    public void SetPhase() { }
 }

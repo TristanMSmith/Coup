@@ -29,19 +29,36 @@ public class B_Interaction : MonoBehaviour
         }
         GetComponent<Image>().sprite = interaction.sprite;
         GetComponentInChildren<TextMeshProUGUI>().SetText(interaction.name);
-        Client.instance.PhaseChange += UpdateVisibility;
+        Client.Instance.PhaseChange += UpdateVisibility;
         UpdateVisibility(null, null);
     }
 
     void UpdateVisibility(object sender, EventArgs e)
     {
-        switch (Client.instance.phase)
+        switch (Client.Instance.phase)
         {
             case Client.Phase.Wait:
+                gameObject.active = false;
                 break;
             case Client.Phase.Action:
+                if (!(interaction is Action))
+                {
+                    gameObject.active = false;
+                }
+                else
+                {
+                    gameObject.active = true;
+                }
                 break;
             case Client.Phase.Counteraction:
+                if (!(interaction is Counteraction))
+                {
+                    gameObject.active = false;
+                }
+                else
+                {
+                    gameObject.active = true;
+                }
                 break;
         }
     }
