@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1be6d9f1a78312a40aa7a5927cfd90a3, type: 3}
-  m_Name: Coup
+  m_Name: Foreign Aid
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 87de387419ff9224c863683b34c83e8a, type: 3}
-  description: Pay 7 credits  to cause a player to lose an influence (Unblockable).
-  creditCost: 7
+  description: Take 2 coins.
+  logic: {fileID: 0}
+  creditCost: -2
   counteraction: {fileID: 0}

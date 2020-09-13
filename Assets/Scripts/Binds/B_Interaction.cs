@@ -15,8 +15,8 @@ public class B_Interaction : MonoBehaviour
     }
 
     void InteractionEvent()//set this up as an event that fires off. The GameController class will listen for this event.
-    { 
-        
+    {
+        Client.Instance.Process(interaction);
     }
 
     private void Awake()
@@ -38,26 +38,26 @@ public class B_Interaction : MonoBehaviour
         switch (Client.Instance.phase)
         {
             case Client.Phase.Wait:
-                gameObject.active = false;
+                gameObject.SetActive(false);
                 break;
             case Client.Phase.Action:
                 if (!(interaction is Action))
                 {
-                    gameObject.active = false;
+                    gameObject.SetActive(false);
                 }
                 else
                 {
-                    gameObject.active = true;
+                    gameObject.SetActive(true);
                 }
                 break;
             case Client.Phase.Counteraction:
                 if (!(interaction is Counteraction))
                 {
-                    gameObject.active = false;
+                    gameObject.SetActive(false);
                 }
                 else
                 {
-                    gameObject.active = true;
+                    gameObject.SetActive(true);
                 }
                 break;
         }

@@ -44,4 +44,14 @@ public class Client : Singleton<Client>
     }
 
     public void SetPhase() { }
+
+    public void Process(Interaction interaction)
+    {
+        //this should get passed to the Host the attempt to process (Process(Interaction interaction))
+        Debug.Log(Environment.StackTrace);
+        //if(interaction)
+
+
+
+    }
 }

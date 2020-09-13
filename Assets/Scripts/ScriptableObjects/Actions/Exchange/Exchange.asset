@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 87de387419ff9224c863683b34c83e8a, type: 3}
   description: Exchange cards with Court Deck.
+  logic: {fileID: 0}
   creditCost: 0
   counteraction: {fileID: 0}
