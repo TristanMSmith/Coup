@@ -19,7 +19,7 @@ public class B_Interaction : MonoBehaviour
         Client.Instance.Process(interaction);
     }
 
-    private void Awake()
+    private void Start()
     {
         if (interaction == null)
         {
@@ -62,5 +62,4 @@ public class B_Interaction : MonoBehaviour
                 break;
         }
     }
-
 }

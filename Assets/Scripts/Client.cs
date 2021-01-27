@@ -48,9 +48,9 @@ public class Client : Singleton<Client>
     public void Process(Interaction interaction)
     {
         //this should get passed to the Host the attempt to process (Process(Interaction interaction))
-        Debug.Log(Environment.StackTrace);
+        //Debug.Log(Environment.StackTrace);
         //if(interaction)
-
+        interaction.logic?.Invoke();
 
 
     }

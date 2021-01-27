@@ -10,7 +10,8 @@ public class Controller : Singleton<Controller>
 
     public void Start()
     {
-        StartCoroutine(CycleState());
+        //StartCoroutine(CycleState());
+        Client.Instance.Action();
     }
 
     IEnumerator CycleState()
