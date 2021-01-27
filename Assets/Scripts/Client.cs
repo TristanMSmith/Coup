@@ -50,7 +50,7 @@ public class Client : Singleton<Client>
         //this should get passed to the Host the attempt to process (Process(Interaction interaction))
         //Debug.Log(Environment.StackTrace);
         //if(interaction)
-        interaction.logic?.Invoke();
+        //interaction.logic?.Invoke();
 
 
     }
