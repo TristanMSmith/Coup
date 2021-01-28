@@ -1,22 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class B_Title : MonoBehaviour
+public class PhaseChangingTitle : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI title;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string WaitText, ActionText, CounteractionText;
     private void Awake()
     {
         Client.Instance.PhaseChange += UpdateTitle;
@@ -27,13 +15,13 @@ public class B_Title : MonoBehaviour
         switch (Client.Instance.phase)
         {
             case Client.Phase.Wait:
-                title.text = "Wait";
+                title.text = WaitText;
                 break;
             case Client.Phase.Action:
-                title.text = "Action";
+                title.text = ActionText;
                 break;
             case Client.Phase.Counteraction:
-                title.text = "Counteraction";
+                title.text = CounteractionText;
                 break;
         }
     }
