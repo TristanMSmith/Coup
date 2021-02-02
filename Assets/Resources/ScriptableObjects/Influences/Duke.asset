@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e04d922ffc0954ead341dd080e44db, type: 3}
   m_Name: Duke
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 1fbc9d38cc09ac34d8e2f7109bcd2d22, type: 3}
   actions:
   - {fileID: 11400000, guid: 5fbad5794c458b24fb47c2cd92fb5310, type: 2}
   - {fileID: 11400000, guid: 3661e05ceaddeca41ad40d3d8d607e11, type: 2}
@@ -21,3 +21,5 @@ MonoBehaviour:
   counteractions:
   - {fileID: 11400000, guid: e5fc2c9d532a21c4b9853644b522dd34, type: 2}
   - {fileID: 11400000, guid: 5d8c449eec37ddb46925b7a620df8ee6, type: 2}
+  description:
+  - Take three coins from the treasury. Block someone from taking foreign aid.

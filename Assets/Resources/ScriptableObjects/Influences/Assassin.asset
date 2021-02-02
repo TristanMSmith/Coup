@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e04d922ffc0954ead341dd080e44db, type: 3}
   m_Name: Assassin
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: aa16e38ebad0a504aa709b04599ea28d, type: 3}
   actions:
-  - {fileID: 11400000, guid: 5fbad5794c458b24fb47c2cd92fb5310, type: 2}
-  - {fileID: 11400000, guid: 3661e05ceaddeca41ad40d3d8d607e11, type: 2}
-  - {fileID: 11400000, guid: bffca6bd6b6a92f4798c36c04d4c3fae, type: 2}
   - {fileID: 11400000, guid: 709dd4ab50e97c547ba2923232f8d434, type: 2}
   counteractions:
   - {fileID: 11400000, guid: e5fc2c9d532a21c4b9853644b522dd34, type: 2}
+  description:
+  - Pay three coins and try to assassinate another player's character.

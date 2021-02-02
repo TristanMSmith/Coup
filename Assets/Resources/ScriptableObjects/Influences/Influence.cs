@@ -5,4 +5,5 @@ public class Influence : ScriptableObject
     public Sprite sprite;
     public Action[] actions;
     public Counteraction[] counteractions;
+    public string[] description;
 }
